@@ -1,3 +1,3 @@
 import "./styles/main.scss";
-import "./components/initialPage";
-
+import "./app/views/initialPage";
+import "./app/controller/todoController";
