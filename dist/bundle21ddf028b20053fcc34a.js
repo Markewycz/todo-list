@@ -110,13 +110,33 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/components/helperFunctions.js":
+/*!*******************************************!*\
+  !*** ./src/components/helperFunctions.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction elementFromHtml(html) {\r\n  const template = document.createElement(\"template\");\r\n\r\n  template.innerHTML = html.trim();\r\n\r\n  return template.content;\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (elementFromHtml);\r\n\n\n//# sourceURL=webpack://todo-list/./src/components/helperFunctions.js?");
+
+/***/ }),
+
+/***/ "./src/components/initialPage.js":
+/*!***************************************!*\
+  !*** ./src/components/initialPage.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_assets_images_wave_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/assets/images/wave.svg */ \"./src/assets/images/wave.svg\");\n/* harmony import */ var _helperFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helperFunctions */ \"./src/components/helperFunctions.js\");\n\r\n\r\n\r\nconst content = document.querySelector(\".content\");\r\n\r\nconst initialPage = (0,_helperFunctions__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(`\r\n  <aside class=\"sidebar\">\r\n    <div class=\"sidebar-header\">\r\n      <h3>Projects</h3>\r\n      <div class=\"action-btns\">\r\n        <button>\r\n          <span class=\"material-symbols-outlined\"> sort </span>\r\n        </button>\r\n        <button>\r\n          <span class=\"material-symbols-outlined\"> left_panel_close </span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n    <div class=\"projects-list\">\r\n      <div class=\"project project-default\">\r\n        <!-- SET MAX CHAR TITLE -->\r\n        <p>Todo App</p>\r\n      </div>\r\n      <div class=\"project add-project\">\r\n        <button class=\"add-project-btn\">\r\n          <span class=\"material-symbols-outlined\"> add_circle </span>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </aside>\r\n  <div class=\"project-container\">\r\n    <div class=\"project-header\">\r\n      <p>\r\n        Todo App\r\n        <button>\r\n          <span class=\"material-symbols-outlined\"> edit </span>\r\n        </button>\r\n        <button>\r\n          <span class=\"material-symbols-outlined\"> delete </span>\r\n        </button>\r\n      </p>\r\n      <button class=\"add-section-btn\">\r\n        <span class=\"material-symbols-outlined\"> add </span>\r\n        <span>Add Section</span>\r\n      </button>\r\n    </div>\r\n    <div class=\"sections-container\">\r\n      <div class=\"section\">\r\n        <div class=\"section-header\">\r\n          <p>Design</p>\r\n          <div class=\"action-btns\">\r\n            <button>\r\n              <span class=\"material-symbols-outlined\"> sort </span>\r\n            </button>\r\n            <button>\r\n              <span class=\"material-symbols-outlined\"> edit </span>\r\n            </button>\r\n            <button>\r\n              <span class=\"material-symbols-outlined\"> delete </span>\r\n            </button>\r\n          </div>\r\n        </div>\r\n        <div class=\"section-content\">\r\n          <div class=\"todo-item high\">\r\n            <p>Edit button color</p>\r\n          </div>\r\n          <div class=\"todo-item low\">\r\n            <p>Change font stack</p>\r\n          </div>\r\n          <div class=\"todo-item medium\">\r\n            <p>Modify navigation bar</p>\r\n          </div>\r\n          <div class=\"todo-item default\">\r\n            <p>Polish gaps</p>\r\n          </div>\r\n        </div>\r\n        <div class=\"todo-item add-todo\">\r\n          <input type=\"text\" class=\"add-todo-input\" />\r\n          <div class=\"placeholder\">\r\n            <span class=\"material-symbols-outlined\"> add </span>\r\n            <span>Add task</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n`);\r\ncontent.append(initialPage);\r\n\r\nconst waveImg = document.getElementById(\"waveImage\");\r\nwaveImg.data = _src_assets_images_wave_svg__WEBPACK_IMPORTED_MODULE_0__;\r\n\r\n\n\n//# sourceURL=webpack://todo-list/./src/components/initialPage.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _assets_images_wave_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/images/wave.svg */ \"./src/assets/images/wave.svg\");\n\r\n\r\n\r\nconst waveImg = document.getElementById(\"waveImage\");\r\n\r\nwaveImg.data = _assets_images_wave_svg__WEBPACK_IMPORTED_MODULE_1__;\r\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _components_initialPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/initialPage */ \"./src/components/initialPage.js\");\n\r\n\r\n\r\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
 
 /***/ }),
 

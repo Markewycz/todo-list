@@ -1,6 +1,3 @@
 import "./styles/main.scss";
-import wave from "./assets/images/wave.svg";
+import "./components/initialPage";
 
-const waveImg = document.getElementById("waveImage");
-
-waveImg.data = wave;
