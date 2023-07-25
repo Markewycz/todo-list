@@ -16,7 +16,7 @@
   \***********************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, ``, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo-list/./src/styles/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `.sidebar {\n  height: 100vh;\n  width: 100%;\n  z-index: 2;\n  background-color: #fff;\n  box-shadow: 0.5rem 0 0.5rem rgba(0, 0, 0, 0.1);\n}\n.sidebar-header {\n  display: flex;\n  justify-content: space-between;\n  padding: 2rem 1.5rem;\n  padding-bottom: 0.5rem;\n  border-bottom: 0.3rem solid rgb(102, 155, 189);\n  margin-bottom: 2rem;\n}\n.sidebar-header h3 {\n  font-size: 2.8rem;\n  letter-spacing: 2px;\n}\n.sidebar-header .action-btns span {\n  font-size: 3rem;\n}\n.sidebar .projects-list {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  gap: 2rem;\n}\n.sidebar .projects-list .project {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 75%;\n  height: 4rem;\n  border-radius: 3rem;\n  box-shadow: 0 0.2rem 0.2rem rgba(119, 119, 119, 0.4);\n  color: #303030;\n  font-family: \"Poppins\", sans-serif;\n  font-weight: 500;\n  letter-spacing: 0.1rem;\n  cursor: pointer;\n  transition: 0.1s all;\n}\n.sidebar .projects-list .project:active {\n  transform: translateY(0.2rem);\n  box-shadow: none;\n}\n.sidebar .projects-list .project-high {\n  background-color: #f25c54;\n}\n.sidebar .projects-list .project-medium {\n  background-color: #f7b267;\n}\n.sidebar .projects-list .project-low {\n  background-color: #669bbc;\n}\n.sidebar .projects-list .project-default {\n  background-color: #b1a7a6;\n}\n.sidebar .projects-list .active {\n  transform: translateY(0.2rem);\n  box-shadow: none;\n}\n.sidebar .projects-list .add-project {\n  box-shadow: none;\n  background-color: transparent;\n  border: 0.2rem solid #b5b5b5;\n}\n.sidebar .projects-list .add-project-btn {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  padding: 0.5rem;\n}\n.sidebar .projects-list .add-project-btn span {\n  color: #b5b5b5;\n}\n\n.project-container {\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: auto 1fr;\n  gap: 2rem;\n  z-index: 2;\n}\n.project-container .project-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding: 2rem 1.5rem;\n  white-space: nowrap;\n}\n.project-container .project-header p {\n  font-size: 4.8rem;\n  font-family: \"Poppins\", sans-serif;\n  padding: 2rem 3rem;\n}\n.project-container .project-header p span {\n  font-size: 3.2rem;\n}\n.project-container .project-header .add-section-btn {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  padding: 0.5rem 1rem;\n  margin-right: 5rem;\n  color: #000;\n  font-size: 1.8rem;\n  height: max-content;\n  border: 0.1rem solid rgb(102, 155, 189);\n  border-radius: 2rem;\n  box-shadow: 0 0.1rem 0.1rem rgba(102, 155, 189, 0.3);\n  transition: 0.1s all;\n}\n.project-container .project-header .add-section-btn:active {\n  transform: translateY(0.1rem);\n  box-shadow: none;\n}\n.project-container .sections-container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 380px));\n  grid-template-rows: repeat(auto-fill, 480px);\n  gap: 6rem;\n  padding: 0 6rem;\n}\n.project-container .sections-container .section {\n  display: grid;\n  grid-template-columns: 1fr;\n  grid-template-rows: auto 1fr auto;\n  gap: 2rem;\n  padding: 2rem 4rem;\n  border-radius: 20px;\n  box-shadow: 0 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.1);\n  background-color: #fff;\n}\n.project-container .sections-container .section .section-header {\n  display: flex;\n  justify-content: space-between;\n  font-size: 2.8rem;\n}\n.project-container .sections-container .section .section-header .action-btns {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.project-container .sections-container .section .section-header .action-btns button {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.project-container .sections-container .section .section-header .action-btns button span {\n  font-size: 2.7rem;\n}\n.project-container .sections-container .section .section-content {\n  display: flex;\n  flex-direction: column;\n  gap: 2rem;\n  overflow-y: auto;\n}\n.project-container .sections-container .section .section-content .todo-item {\n  position: relative;\n}\n.project-container .sections-container .section .section-content .todo-item::before {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 15px;\n  height: 100%;\n  border-top-left-radius: 9px;\n  border-bottom-left-radius: 9px;\n}\n.project-container .sections-container .section .section-content .high::before {\n  background-color: #f25c54;\n}\n.project-container .sections-container .section .section-content .medium::before {\n  background-color: #f7b267;\n}\n.project-container .sections-container .section .section-content .low::before {\n  background-color: #669bbc;\n}\n.project-container .sections-container .section .section-content .default::before {\n  background-color: #b1a7a6;\n}\n.project-container .sections-container .section .todo-item {\n  display: flex;\n  align-items: center;\n  padding-left: 2.5rem;\n  width: 100%;\n  min-height: 45px;\n  border: 0.1rem solid #b5b5b5;\n  border-radius: 10px;\n  cursor: pointer;\n}\n.project-container .sections-container .section .add-todo {\n  cursor: text;\n  position: relative;\n  padding-left: 1rem;\n}\n.project-container .sections-container .section .add-todo .placeholder {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n}\n.project-container .sections-container .section .add-todo .placeholder span {\n  color: #b5b5b5;\n}\n.project-container .sections-container .section .add-todo input {\n  width: 100%;\n  height: 100%;\n  z-index: 3;\n}\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nhtml {\n  font-size: 10px;\n  font-family: \"Roboto\", sans-serif;\n}\n\nbody {\n  font-size: 1.6rem;\n  overflow-y: hidden;\n}\n\nbutton {\n  cursor: pointer;\n  border: none;\n  outline: none;\n  background-color: transparent;\n}\n\ninput {\n  outline: none;\n  border: none;\n  background-color: transparent;\n  font-size: 1.6rem;\n}\n\n.content {\n  width: 100%;\n  height: 100vh;\n  background-color: #f6f6f6;\n  display: grid;\n  grid-template-columns: 285px 1fr;\n}\n\n#waveImage {\n  position: absolute;\n  bottom: 0;\n  width: 100vw;\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://todo-list/./src/styles/main.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -116,7 +116,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n\r\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _assets_images_wave_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/images/wave.svg */ \"./src/assets/images/wave.svg\");\n\r\n\r\n\r\nconst waveImg = document.getElementById(\"waveImage\");\r\n\r\nwaveImg.data = _assets_images_wave_svg__WEBPACK_IMPORTED_MODULE_1__;\r\n\n\n//# sourceURL=webpack://todo-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/assets/images/wave.svg":
+/*!************************************!*\
+  !*** ./src/assets/images/wave.svg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"images/wave.svg\";\n\n//# sourceURL=webpack://todo-list/./src/assets/images/wave.svg?");
 
 /***/ })
 
@@ -171,6 +181,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -185,6 +207,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */
