@@ -29,15 +29,15 @@ class InitPage {
     </aside>
     <div class="project-container">
       <div class="project-header">
-        <p>
-          Todo App
+        <div class="project-header-title">
+        <p>Todo App</p>
           <button>
             <span class="material-symbols-outlined"> edit </span>
           </button>
           <button>
             <span class="material-symbols-outlined"> delete </span>
           </button>
-        </p>
+        </div>
         <button class="add-section-btn">
           <span class="material-symbols-outlined"> add </span>
           <span>Add Section</span>

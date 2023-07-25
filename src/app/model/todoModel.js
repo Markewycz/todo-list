@@ -4,7 +4,7 @@ class App {
   }
 
   createProject(name) {
-    const project = new Project(name);
+    const project = new Project(name, this.projects.length);
     this.projects.push(project);
 
     return project;
@@ -15,8 +15,9 @@ class App {
 }
 
 class Project {
-  constructor(name) {
+  constructor(name, id) {
     this.name = name;
+    this.id = id;
     this.sections = [];
   }
 

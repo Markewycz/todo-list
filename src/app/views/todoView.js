@@ -22,6 +22,13 @@ class View {
   }
 
   renderProject(project) {
+    console.log(
+      (this.container.childNodes[2].childNodes[1].childNodes[1].childNodes[1].textContent =
+        project.name)
+    );
+  }
+
+  renderSections(project) {
     let projectSections = [];
 
     for (let i = 0; i < project.sections.length; i++) {
@@ -53,8 +60,8 @@ class View {
       `);
       projectSections.push(projectSection);
     }
-
     projectSections.forEach((section) => {
+      console.log(section);
       this.container.childNodes[2].childNodes[3].append(section);
     });
   }
