@@ -1,0 +1,162 @@
+@import "config";
+
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+  z-index: 2;
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    white-space: nowrap;
+
+    p {
+      font-size: 4.8rem;
+      font-family: $font-stack-secondary;
+      padding: 2rem 3rem;
+
+      span {
+        font-size: 3.2rem;
+      }
+    }
+
+    .add-section-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      margin-right: 5rem;
+
+      color: $black;
+      font-size: 1.8rem;
+      height: max-content;
+      border: 0.1rem solid rgba(102, 155, 189, 1);
+      border-radius: 2rem;
+      box-shadow: 0 0.1rem 0.1rem rgba(102, 155, 189, 0.3);
+      transition: 0.1s all;
+
+      &:active {
+        transform: translateY(0.1rem);
+        box-shadow: none;
+      }
+    }
+  }
+
+  .sections-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 380px));
+    grid-template-rows: repeat(auto-fill, 480px);
+    // justify-content: center;
+
+    gap: 6rem;
+    padding: 0 6rem;
+
+    .section {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 2rem;
+      padding: 2rem 4rem;
+      border-radius: 20px;
+
+      box-shadow: 0 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.1);
+      background-color: $white;
+
+      .section-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 2.8rem;
+
+        .action-btns {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+              font-size: 2.7rem;
+            }
+          }
+        }
+      }
+
+      .section-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        overflow-y: auto;
+
+        .todo-item {
+          position: relative;
+        }
+
+        .todo-item::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 15px;
+          height: 100%;
+          border-top-left-radius: 9px;
+          border-bottom-left-radius: 9px;
+        }
+
+        .high::before {
+          background-color: $importance-high-color;
+        }
+        .medium::before {
+          background-color: $importance-medium-color;
+        }
+        .low::before {
+          background-color: $importance-low-color;
+        }
+        .default::before {
+          background-color: $importance-default-color;
+        }
+      }
+
+      .todo-item {
+        display: flex;
+        align-items: center;
+
+        padding-left: 2.5rem;
+        width: 100%;
+        min-height: 45px;
+        border: 0.1rem solid $grey-color;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .add-todo {
+        cursor: text;
+        position: relative;
+        padding-left: 1rem;
+
+        .placeholder {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+
+          span {
+            color: $grey-color;
+          }
+        }
+
+        input {
+          width: 100%;
+          height: 100%;
+          z-index: 3;
+        }
+      }
+    }
+  }
+}

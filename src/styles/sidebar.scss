@@ -1,0 +1,94 @@
+@import "config";
+
+.sidebar {
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  background-color: $white;
+
+  box-shadow: 0.5rem 0 0.5rem rgba(0, 0, 0, 0.1);
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.3rem solid $primary-color;
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+    }
+
+    .action-btns span {
+      font-size: 3rem;
+    }
+  }
+
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .project {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 75%;
+      height: 4rem;
+      border-radius: 3rem;
+
+      box-shadow: 0 0.2rem 0.2rem rgba(119, 119, 119, 0.4);
+      color: $font-color-primary;
+      font-family: $font-stack-secondary;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+      cursor: pointer;
+      transition: 0.1s all;
+
+      &:active {
+        transform: translateY(0.2rem);
+        box-shadow: none;
+      }
+
+      &-high {
+        background-color: $importance-high-color;
+      }
+      &-medium {
+        background-color: $importance-medium-color;
+      }
+      &-low {
+        background-color: $importance-low-color;
+      }
+      &-default {
+        background-color: $importance-default-color;
+      }
+    }
+
+    .active {
+      transform: translateY(0.2rem);
+      box-shadow: none;
+    }
+
+    .add-project {
+      box-shadow: none;
+      background-color: transparent;
+      border: 0.2rem solid $grey-color;
+
+      &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0.5rem;
+
+        span {
+          color: $grey-color;
+        }
+      }
+    }
+  }
+}
