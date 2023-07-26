@@ -1,5 +1,6 @@
 import wave from "/src/assets/images/wave.svg";
 import elementFromHtml from "/src/app/helperFunctions";
+import ProjectView from "./projectRenderView";
 
 class InitPage {
   renderPage() {
@@ -30,13 +31,7 @@ class InitPage {
     <div class="project-container">
       <div class="project-header">
         <div class="project-header-title">
-        <p>Todo App</p>
-          <button>
-            <span class="material-symbols-outlined"> edit </span>
-          </button>
-          <button>
-            <span class="material-symbols-outlined"> delete </span>
-          </button>
+        
         </div>
         <button class="add-section-btn">
           <span class="material-symbols-outlined"> add </span>

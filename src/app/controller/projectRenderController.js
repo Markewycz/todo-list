@@ -1,15 +1,22 @@
-import View from "../views/todoView";
-import { App, Project, Section, Tasks } from "../model/todoModel";
+import ProjectView from "../views/projectRenderView";
+import App from "../model/todoModel";
 import InitPage from "../views/initialPage";
-const content = document.querySelector(".content");
 
-class Controller {
+class ProjectViewController {
   constructor(view) {
     this.view = view;
   }
 
+  initPage() {
+    initPage.renderPage();
+  }
+
+  switchProject(projectList) {
+    this.view.switchProject(projectList);
+  }
+
   appendProjectList(projectList) {
-    this.view.showList(projectList);
+    this.view.renderList(projectList);
   }
 
   appendProject(project) {
@@ -21,8 +28,8 @@ class Controller {
 
 const initPage = new InitPage();
 const myApp = new App();
-const view = new View(content);
-const controller = new Controller(view);
+const view = new ProjectView();
+const controller = new ProjectViewController(view);
 
 const project1 = myApp.createProject("Tic-Tac-Toe");
 const project2 = myApp.createProject("Todo App");
@@ -34,11 +41,9 @@ const project1Section1Task1 = project1Section1.createTask(
 );
 const project1Section1Task2 = project1Section2.createTask("Render buttons");
 
-initPage.renderPage();
-// console.log(project1);
-// console.log(myApp.getProjects());
-
+controller.initPage();
 controller.appendProjectList(myApp.getProjects());
 controller.appendProject(myApp.getProjects()[0]);
+controller.switchProject(myApp.getProjects());
 
-console.log(myApp.getProjects()[0]);
+export default ProjectViewController;

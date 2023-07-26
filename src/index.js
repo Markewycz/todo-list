@@ -1,3 +1,2 @@
 import "./styles/main.scss";
-import "./app/views/initialPage";
-import "./app/controller/todoController";
+import "./app/controller/projectRenderController";

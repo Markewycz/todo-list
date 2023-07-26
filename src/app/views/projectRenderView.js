@@ -1,31 +1,39 @@
 import elementFromHtml from "../helperFunctions";
 
-class View {
-  constructor(container) {
-    this.container = container;
+class ProjectView {
+  constructor() {}
+
+  clearProjectView() {
+    document.querySelector(".project-header-title").replaceChildren();
+    document.querySelector(".sections-container").replaceChildren();
   }
-  showList(projectsList) {
+  renderList(projectsList) {
     let projectNames = [];
     for (let i = 0; i < projectsList.length; i++) {
       const projectItem = elementFromHtml(`
-      <div class="project project-default">
+      <div class="project project-default" data-id="${projectsList[i].id}">
           <p>${projectsList[i].name}</p>
         </div>
       `);
-
       projectNames.push(projectItem);
     }
-
     projectNames.forEach((element) => {
-      this.container.childNodes[0].childNodes[3].append(element);
+      document.querySelector(".projects-list").append(element);
     });
   }
 
   renderProject(project) {
-    console.log(
-      (this.container.childNodes[2].childNodes[1].childNodes[1].childNodes[1].textContent =
-        project.name)
-    );
+    const projectHeader = elementFromHtml(`
+          <p>${project.name}</p>
+          <button>
+            <span class="material-symbols-outlined"> edit </span>
+          </button>
+          <button>
+            <span class="material-symbols-outlined"> delete </span>
+          </button>
+    `);
+
+    document.querySelector(".project-header-title").append(projectHeader);
   }
 
   renderSections(project) {
@@ -61,8 +69,7 @@ class View {
       projectSections.push(projectSection);
     }
     projectSections.forEach((section) => {
-      console.log(section);
-      this.container.childNodes[2].childNodes[3].append(section);
+      document.querySelector(".sections-container").append(section);
     });
   }
 
@@ -79,12 +86,30 @@ class View {
       }
 
       tasks.forEach((task) => {
-        this.container.childNodes[2].childNodes[3].childNodes[
-          i
-        ].childNodes[3].append(task);
+        document
+          .querySelector(".sections-container")
+          .childNodes[i].childNodes[3].append(task);
       });
     }
   }
+
+  switchProject(projectList) {
+    const domProjectList = document.querySelector(".projects-list").children;
+    const arrProjectList = [...domProjectList];
+    console.log(arrProjectList);
+
+    arrProjectList.forEach((elem) => {
+      elem.addEventListener("click", (e) => {
+        const id = +elem.dataset.id;
+        const project = projectList[id];
+
+        this.clearProjectView();
+        this.renderProject(project);
+        this.renderSections(project);
+        this.renderTasks(project);
+      });
+    });
+  }
 }
 
-export default View;
+export default ProjectView;

@@ -55,4 +55,4 @@ class Tasks {
   }
 }
 
-export { App, Project, Section, Tasks };
+export default App;
