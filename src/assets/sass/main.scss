@@ -1,0 +1,193 @@
+@import 'variables';
+@import 'general';
+
+.button {
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+
+
+  &:hover {
+    background-color: #001f3f;
+    color: #fff;
+  }
+
+}
+
+.modal {
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(0, 0, 0, .3);
+  border-radius: 2px;
+
+  >h2 {
+    border-bottom: 1px solid rgba(0, 31, 63, 1);
+    padding: 16px;
+  }
+
+  input {
+    border: 1px solid black;
+    padding: 6px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 8px;
+  }
+
+  &__buttons {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+
+    .add,
+    .cancel {
+      width: 50%;
+      justify-content: center;
+      border: 1px solid transparent;
+    }
+
+    .add {
+      background-color: #001f3f;
+      color: #fff;
+    }
+
+    .cancel {
+      color: #000;
+      background-color: #fff;
+      border: 1px solid black;
+
+      &:hover {
+        color: #000;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  width: 100%;
+  background-color: #e2e8f0;
+
+}
+
+.header {
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  height: 88px;
+  padding: 16px 32px;
+  background-color: #001f3f;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  color: #fff;
+
+  &__title {
+    font-style: italic;
+    font-size: 44px;
+    text-transform: uppercase;
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: calc(100vh - 88px);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  background-color: #d8e2f1;
+  padding: 12px;
+  width: 240px;
+  gap: 16px;
+
+  &__user-projects,
+  &__projects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__user-projects {
+    gap: 12px;
+
+    .project {
+      gap: 6px;
+    }
+  }
+
+  &__projects {
+    gap: 4px;
+  }
+
+
+  .button.add-project {
+    padding: 4px;
+  }
+
+  &__add-project {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .project-name-input {
+      border: 1px solid black;
+      padding: 6px;
+      width: 100%;
+    }
+
+    &-buttons {
+      display: flex;
+      width: 100%;
+      gap: 4px;
+
+      .add,
+      .cancel {
+        border: 1px solid black;
+        width: 50%;
+        justify-content: center;
+      }
+    }
+  }
+
+}
+
+.project-preview {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  padding: 30px;
+  margin: 0 auto;
+  gap: 24px;
+
+  // &.adding-task {
+  //   .button.add-task {
+  //     display: none;
+  //   }
+
+  //   .project-preview__add-task {
+  //     display: flex;
+  //   }
+  // }
+
+  &__tasks {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .task {
+      width: 100%;
+      gap: 8px;
+    }
+  }
+
+  .task-name-input {}
+}

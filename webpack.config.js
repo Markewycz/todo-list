@@ -1,49 +1,49 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
   entry: {
-    bundle: "./src/index.js",
+    bundle: './src/index.js',
   },
 
   devServer: {
-    static: "./dist",
+    static: './dist',
   },
   output: {
-    filename: "[name][contenthash].js",
-    path: path.resolve(__dirname, "dist"),
-    assetModuleFilename: "[name][ext]",
+    filename: '[name][contenthash].js',
+    path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: '[name][ext]',
     clean: true,
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   module: {
     rules: [
       {
         test: /\.scss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
         generator: {
-          filename: "images/[name][ext]",
+          filename: 'images/[name][ext]',
         },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
         generator: {
-          filename: "fonts/[name][ext]",
+          filename: 'fonts/[name][ext]',
         },
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Todo List",
-      filename: "index.html",
-      template: "./src/index.html",
+      title: 'Todo List',
+      filename: 'index.html',
+      template: './src/index.html',
     }),
   ],
 };

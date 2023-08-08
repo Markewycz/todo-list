@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "scss": "sass --watch src/styles/scss/style.scss src/styles/css/style.css",
     "start": "webpack serve --open",
+    "postcss-order": "postcss ./src/**/*.scss --replace --config package.json",
     "pages": "git subtree push --prefix dist origin gh-pages",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Markewycz/todo-list#readme",
   "devDependencies": {
+    "css-declaration-sorter": "^7.0.3",
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",
     "gh-pages": "^5.0.0",
@@ -33,5 +34,19 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "postcss": {
+    "syntax": "postcss-scss",
+    "map": false,
+    "plugins": {
+      "css-declaration-sorter": {
+        "order": "smacss"
+      }
+    }
+  },
+  "dependencies": {
+    "postcss": "^8.4.27",
+    "prettier": "2.0",
+    "prettier-plugin-css-order": "^1.3.1"
   }
 }

@@ -16,6 +16,81 @@
     />
   </head>
   <body>
-    <div class="content"></div>
+    <div class="content">
+      <header class="header">
+        <h1 class="header__title">To-do</h1>
+      </header>
+      <main class="main">
+        <nav class="nav">
+          <div class="nav__user-projects">
+            <h3>Your projects:</h3>
+            <!-- <div class="nav__projects">
+              <button type="button" class="button project" data-project>
+                <span class="material-symbols-outlined">
+                  checklist
+                </span>
+                <span class="project-name">Project 1</span>
+              </button>
+              <button type="button" class="button project" data-project>
+                <span class="material-symbols-outlined">
+                  checklist
+                </span>
+                <span class="project-name">Project 2</span>
+              </button>
+            </div> -->
+          </div>
+
+          <button id="addProjects" type="button" class="button add-project">
+            <span class="material-symbols-outlined"> add </span>
+            <span> Add Project</span>
+          </button>
+
+          <dialog data-modal="addProject" class="modal add-project-modal">
+            <h2>Add Project</h2>
+            <div class="modal__content">
+              <label for="projectName" class="">Project Name:</label>
+              <input type="text" id="projectName" class="project-name-input" />
+              <div class="modal__buttons">
+                <button id="cancelProject" type="button" class="button cancel">
+                  Cancel
+                </button>
+                <button id="addProject" type="button" class="button add">
+                  Add
+                </button>
+              </div>
+            </div>
+          </dialog>
+        </nav>
+
+        <div class="project-preview">
+          <!-- <h1 class="project-preview__title">Project 1</h1>
+          <div class="project-preview__tasks">
+            <button class="button task">
+              <span class="material-symbols-outlined"> circle </span>
+              <span class="task-name">Do 10 push-ups</span>
+            </button>
+          </div>
+          <button id="addTasks" type="button" class="button add-task">
+            <span class="material-symbols-outlined"> add </span>
+            <span> Add Task</span>
+          </button>
+          <dialog data-modal="addTask" class="modal add-task-modal">
+            <h2>Add Task</h2>
+            <div class="modal__content">
+              <label for="taskName" class="">Task Name:</label>
+              <input type="text" id="taskName" class="task-name-input" />
+              <div class="modal__buttons">
+                <button id="cancelTask" type="button" class="button cancel">
+                  Cancel
+                </button>
+                <button id="addTask" type="button" class="button add">
+                  Add
+                </button>
+              </div>
+            </div>
+          </dialog> -->
+        </div>
+      </main>
+    </div>
   </body>
 </html>

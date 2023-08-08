@@ -1,2 +1,2 @@
-import "./styles/main.scss";
-import "./app/controller/projectRenderController";
+import './assets/sass/main.scss';
+import './assets/js/Ui.js';
