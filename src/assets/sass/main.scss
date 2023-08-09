@@ -121,7 +121,15 @@
 
     .project {
       gap: 6px;
+
+      &.selected {
+        font-weight: 700;
+        background-color: #001f3f;
+        color: #fff;
+      }
     }
+
+
   }
 
   &__projects {
