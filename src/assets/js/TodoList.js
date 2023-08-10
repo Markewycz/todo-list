@@ -1,15 +1,10 @@
-import Project from './Project';
-
 export default class TodoList {
   constructor() {
     this.projects = [];
   }
 
-  addProject(title) {
-    const project = new Project(title);
+  addProject(project) {
     this.projects.push(project);
-
-    return project;
   }
 
   addTaskToProject(project, task) {
@@ -26,5 +21,9 @@ export default class TodoList {
 
   getProject(name) {
     return this.projects.find(project => project.title === name);
+  }
+
+  getTask(project) {
+    return project.getTask();
   }
 }

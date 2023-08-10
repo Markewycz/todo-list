@@ -6,10 +6,11 @@ export default class UI {
   }
 
   loadHomepage() {
-    this.storage.getTodoList();
-    this.loadProjects();
+    this.storage.loadTodoList();
     this.initButtons();
     this.createDefaultProject();
+
+    this.loadProjects();
     this.previewDefaultProject();
   }
 
@@ -47,6 +48,16 @@ export default class UI {
   previewProject(project) {
     document.querySelector('.project-preview__title').textContent =
       project.title;
+
+    this.clearPreviewProject();
+    project.getTasks().forEach(task => {
+      this.createTask(task);
+    });
+  }
+
+  clearPreviewProject() {
+    const previewTasks = document.querySelector('.project-preview__tasks');
+    previewTasks.innerHTML = '';
   }
 
   addProject() {
@@ -108,8 +119,11 @@ export default class UI {
     projectsListContainer.addEventListener('click', e => {
       const btn = e.target.closest('button');
 
+      if (e.target !== btn) return;
+
       if (btn.dataset.hasOwnProperty('project')) {
         const projectName = btn.children[1].textContent;
+
         this.previewProject(this.storage.getProject(projectName));
         document.querySelectorAll('[data-project]').forEach(project => {
           project.classList.remove('selected');

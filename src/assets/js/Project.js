@@ -1,5 +1,3 @@
-import Task from './Task';
-
 export default class Project {
   constructor(title) {
     this.title = title;
@@ -7,9 +5,7 @@ export default class Project {
   }
 
   addTask(task) {
-    const taskObj = new Task(task);
-    this.tasks.push(taskObj);
-    return taskObj;
+    this.tasks.push(task);
   }
 
   getTasks() {
