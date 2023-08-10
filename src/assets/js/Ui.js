@@ -121,7 +121,7 @@ export default class UI {
     this.previewProject(this.storage.getProjects()[0]);
     document
       .querySelector('.nav__projects')
-      .children[0].firstChild.classList.add('selected');
+      .children[0].classList.add('selected');
   }
 
   // Event listeners
