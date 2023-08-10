@@ -15,12 +15,20 @@ export default class TodoList {
     task.complete();
   }
 
+  deleteProject(projectTitle) {
+    for (let i = 0; i < this.projects.length; i++) {
+      if (this.projects[i].title === projectTitle) {
+        this.projects.splice(i, 1);
+      }
+    }
+  }
+
   getProjects() {
     return this.projects;
   }
 
-  getProject(name) {
-    return this.projects.find(project => project.title === name);
+  getProject(projectTitle) {
+    return this.projects.find(project => project.title === projectTitle);
   }
 
   getTask(project) {

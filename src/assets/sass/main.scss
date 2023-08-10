@@ -1,6 +1,10 @@
 @import 'variables';
 @import 'general';
 
+.text-center {
+  text-align: center;
+}
+
 .button {
   padding: 6px;
   display: flex;
@@ -121,11 +125,30 @@
 
     .project {
       gap: 6px;
+      justify-content: space-between;
+
+      >.deleteProject {
+        display: none;
+      }
 
       &.selected {
         font-weight: 700;
         background-color: #001f3f;
         color: #fff;
+
+        .deleteProject {
+          display: block;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, .3);
+          }
+        }
+      }
+
+      .wrapper {
+        display: flex;
+        align-items: center;
+        gap: 6px;
       }
     }
 

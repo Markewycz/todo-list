@@ -16,7 +16,6 @@ export default class Storage {
     if (storedData) {
       this.todoList = this.deserializeTodoList(storedData);
     }
-    console.log(this.todoList);
   }
 
   deserializeTodoList(data) {
@@ -42,12 +41,18 @@ export default class Storage {
   }
 
   addProject(title) {
-    // TODO Add validation for existing title in projects array
-    const project = new Project(title);
-    this.todoList.addProject(project);
-    this.saveTodoList();
+    const projectExist = this.todoList
+      .getProjects()
+      .some(project => project.title === title);
 
-    return project;
+    if (!projectExist) {
+      const project = new Project(title);
+      this.todoList.addProject(project);
+      this.saveTodoList();
+    } else {
+      alert('Name already exists');
+      return true;
+    }
   }
 
   addTask(project, taskTitle) {
@@ -58,6 +63,11 @@ export default class Storage {
     return task;
   }
 
+  deleteProject(projectTitle) {
+    this.todoList.deleteProject(projectTitle);
+    this.saveTodoList();
+  }
+
   getProjects() {
     return this.todoList.getProjects();
   }
@@ -66,8 +76,8 @@ export default class Storage {
     return this.todoList.getTasks();
   }
 
-  getProject(name) {
-    return this.todoList.getProject(name);
+  getProject(projectTitle) {
+    return this.todoList.getProject(projectTitle);
   }
 
   getTask(project) {
