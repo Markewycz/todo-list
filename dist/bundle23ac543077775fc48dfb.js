@@ -392,7 +392,7 @@ var UI = /*#__PURE__*/function () {
     key: "selectFirstProject",
     value: function selectFirstProject() {
       this.previewProject(this.storage.getProjects()[0]);
-      document.querySelector('.nav__projects').children[0].firstChild.classList.add('selected');
+      document.querySelector('.nav__projects').children[0].classList.add('selected');
     }
 
     // Event listeners
@@ -1253,4 +1253,4 @@ document.addEventListener('DOMContentLoaded', uiInstance.loadHomepage.bind(uiIns
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle91b2103a903e05897d6f.js.map
+//# sourceMappingURL=bundle23ac543077775fc48dfb.js.map

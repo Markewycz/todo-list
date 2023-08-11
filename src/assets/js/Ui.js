@@ -1,5 +1,3 @@
-import Storage from './Storage';
-
 export default class UI {
   constructor(storage) {
     this.storage = storage;
@@ -36,9 +34,11 @@ export default class UI {
       </span>
       <span class="project-name">${projectTitle}</span>
     </span>
-    <span class="material-symbols-outlined deleteProject">
-      delete
-    </span>
+    <button type="button" class="deleteProject">
+      <span class="material-symbols-outlined">
+        delete
+      </span>
+    </button>
   </button>`;
   }
 
@@ -124,6 +124,11 @@ export default class UI {
       .children[0].classList.add('selected');
   }
 
+  completeTask(projectTitle, taskTitle) {
+    this.storage.completeTask(projectTitle, taskTitle);
+    this.previewProject(this.storage.getProject(projectTitle));
+  }
+
   // Event listeners
   openModalProject() {
     const modalProject = document.querySelector("[data-modal='addProject']");
@@ -165,25 +170,41 @@ export default class UI {
     const projectsListContainer = document.querySelector('.nav__projects');
     const cancelDelete = document.getElementById('deleteProjectCancel');
     const deleteProject = document.getElementById('deleteProject');
+    const tasksContainer = document.querySelector('.project-preview__tasks');
 
     projectsListContainer.addEventListener('click', e => {
-      const btn = e.target.closest('button');
-      const projectTitle = btn.children[0].children[1].textContent;
-      const deleteBtn = document.querySelectorAll('.deleteProject');
+      const deleteBtn = e.target.closest('button');
+      const deleteBtns = document.querySelectorAll('.deleteProject');
 
-      deleteBtn.forEach(btn => {
-        if (e.target === btn) {
+      deleteBtns.forEach(btn => {
+        if (deleteBtn === btn) {
           btn.addEventListener('click', this.openModalDelete);
         }
       });
+    });
+
+    projectsListContainer.addEventListener('click', e => {
+      const btn = e.target.closest('button');
+      if (e.target !== btn) return;
 
       if (btn.dataset.hasOwnProperty('project')) {
+        const projectTitle = btn.children[0].children[1].textContent;
         this.previewProject(this.storage.getProject(projectTitle));
         document.querySelectorAll('[data-project]').forEach(project => {
           project.classList.remove('selected');
         });
         btn.classList.add('selected');
       }
+    });
+
+    tasksContainer.addEventListener('click', e => {
+      const taskTitle = e.target.closest('button').children[1].textContent;
+      const selectedProject = document.querySelector('.selected').children[0]
+        .children[1].textContent;
+
+      // if (e.target !== taskTitle) return;
+
+      this.completeTask(selectedProject, taskTitle);
     });
 
     addProject.addEventListener('click', this.addProject.bind(this));

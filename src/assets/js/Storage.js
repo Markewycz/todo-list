@@ -68,6 +68,12 @@ export default class Storage {
     this.saveTodoList();
   }
 
+  completeTask(projectTitle, taskTitle) {
+    const project = this.todoList.getProject(projectTitle);
+    this.todoList.completeTask(project, taskTitle);
+    this.saveTodoList();
+  }
+
   getProjects() {
     return this.todoList.getProjects();
   }

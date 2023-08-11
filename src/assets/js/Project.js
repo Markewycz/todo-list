@@ -15,4 +15,12 @@ export default class Project {
   getTask() {
     return this.tasks[this.tasks.length - 1];
   }
+
+  getTaskID(taskTitle) {
+    return this.tasks.findIndex(task => task.title === taskTitle);
+  }
+
+  completeTask(taskID) {
+    this.tasks.splice(taskID, 1);
+  }
 }

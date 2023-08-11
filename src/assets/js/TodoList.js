@@ -11,10 +11,6 @@ export default class TodoList {
     project.addTask(task);
   }
 
-  completeTask(task) {
-    task.complete();
-  }
-
   deleteProject(projectTitle) {
     for (let i = 0; i < this.projects.length; i++) {
       if (this.projects[i].title === projectTitle) {
@@ -33,5 +29,9 @@ export default class TodoList {
 
   getTask(project) {
     return project.getTask();
+  }
+
+  completeTask(project, taskTitle) {
+    project.completeTask(project.getTaskID(taskTitle));
   }
 }
