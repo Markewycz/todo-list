@@ -26,20 +26,32 @@ export default class UI {
   }
 
   createProject(projectTitle) {
-    document.querySelector('.nav__projects').innerHTML += `
-    <button type="button" class="button project" data-project>
-    <span class="wrapper">
-      <span class="material-symbols-outlined">
-        checklist
-      </span>
-      <span class="project-name">${projectTitle}</span>
-    </span>
-    <button type="button" class="deleteProject">
-      <span class="material-symbols-outlined">
-        delete
-      </span>
-    </button>
-  </button>`;
+    if (projectTitle === 'Todo List') {
+      document.querySelector('.nav__projects').innerHTML += `
+        <button type="button" class="button project" data-project>
+          <span class="wrapper">
+            <span class="material-symbols-outlined">
+              checklist
+            </span>
+            <span class="project-name">${projectTitle}</span>
+          </span>
+        </button>`;
+    } else {
+      document.querySelector('.nav__projects').innerHTML += `
+        <button type="button" class="button project" data-project>
+          <span class="wrapper">
+            <span class="material-symbols-outlined">
+              checklist
+            </span>
+            <span class="project-name">${projectTitle}</span>
+          </span>
+          <button type="button" class="deleteProject">
+            <span class="material-symbols-outlined">
+              delete
+            </span>
+          </button>
+        </button>`;
+    }
   }
 
   createTask(task) {
