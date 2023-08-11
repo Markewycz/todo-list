@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'general';
+@import "mixins";
 
 .text-center {
   text-align: center;
@@ -37,11 +38,16 @@
     padding: 6px;
   }
 
+  body {
+    overflow: hidden;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
     padding: 16px;
     gap: 8px;
+    overflow: hidden;
   }
 
   &__buttons {
@@ -93,6 +99,11 @@
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   color: #fff;
 
+  @include view(mobile) {
+    height: 71px;
+
+  }
+
   &__title {
     font-style: italic;
     font-size: 44px;
@@ -104,6 +115,13 @@
   display: grid;
   grid-template-columns: auto 1fr;
   height: calc(100vh - 88px);
+
+  @include view(mobile) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: calc(100vh - 71px);
+
+  }
 }
 
 .nav {
@@ -113,6 +131,10 @@
   padding: 12px;
   width: 240px;
   gap: 16px;
+
+  @include view(mobile) {
+    width: 100vw;
+  }
 
   &__user-projects,
   &__projects {
@@ -155,8 +177,6 @@
         gap: 6px;
       }
     }
-
-
   }
 
   &__projects {
@@ -202,6 +222,19 @@
   padding: 30px;
   margin: 0 auto;
   gap: 24px;
+
+  @include view(small-desktop) {
+    width: 600px;
+  }
+
+  @include view(tablet) {
+    width: 400px;
+  }
+
+  @include view(mobile) {
+    width: 100%
+  }
+
 
   // &.adding-task {
   //   .button.add-task {
